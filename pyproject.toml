@@ -15,7 +15,7 @@ dependencies = ["numpy>=1.26", "opencv-python-headless>=4.9"]
 sceneguard = "sceneguard.__main__:main"
 
 [project.urls]
-Repository = "https://github.com/REPLACE_ME/sceneguard"
+Repository = "https://github.com/harsh000h/sceneguard"
 
 [tool.setuptools]
 packages = ["sceneguard"]
