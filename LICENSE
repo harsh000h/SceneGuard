@@ -1,0 +1,19 @@
+GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+
+Copyright (C) 2026 SceneGuard contributors
+
+This program is free software: you can redistribute it and/or modify it under the
+terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+Scope invariant (also enforced in code, sceneguard/schema.py:SKIP_ELIGIBLE):
+this software may only be used to skip, mute, mark or blur nudity and sexual
+content. It contains no facility to remove or alter violent content, gore, or
+language, and forks that add one are outside the intent of this licence.
+
+The full text is at https://www.gnu.org/licenses/gpl-3.0.txt

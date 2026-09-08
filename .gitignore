@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+.sceneguard/
+out/
+.gradle/
+local.properties
+android/app/build/
+android/core/build/
+.idea/
+*.iml
+.DS_Store
+node_modules/
+.env
+*.keystore
+*.jks
+secrets/
+# never commit user media or user manifests
+*.mp4
+!extension/fixtures/synthetic.mp4
+*.mkv
+*.mov
