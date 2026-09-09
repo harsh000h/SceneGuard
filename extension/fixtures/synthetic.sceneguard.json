@@ -1,0 +1,58 @@
+{
+  "schema": "sceneguard/manifest@1",
+  "title": "synthetic",
+  "video_id": "synthetic",
+  "generated_by": "sceneguard-cli",
+  "license": "CC0-1.0",
+  "segments": [
+    {
+      "start": 6.24,
+      "end": 13.44,
+      "categories": [
+        "nudity"
+      ],
+      "confidence": 0.796,
+      "label": "vision proxy: sustained skin-dominant shot",
+      "source": "vision",
+      "mode": "skip",
+      "duration": 7.2
+    },
+    {
+      "start": 13.44,
+      "end": 16.2,
+      "categories": [
+        "sex"
+      ],
+      "confidence": 0.43,
+      "label": "caption-only evidence: \u201c- Where are we going? - The bedroom. Take your clothes off.\u201d",
+      "source": "captions",
+      "mode": "ask",
+      "duration": 2.76
+    },
+    {
+      "start": 24.96,
+      "end": 30.24,
+      "categories": [
+        "nudity"
+      ],
+      "confidence": 0.796,
+      "label": "vision proxy: sustained skin-dominant shot",
+      "source": "vision",
+      "mode": "skip",
+      "duration": 5.28
+    },
+    {
+      "start": 33.0,
+      "end": 34.8,
+      "categories": [
+        "gore"
+      ],
+      "confidence": 0.45,
+      "label": "caption-only evidence: \u201cThere is blood everywhere, he was stabbed twice.\u201d",
+      "source": "captions",
+      "mode": "mark_only",
+      "duration": 1.8
+    }
+  ],
+  "duration": 50.0
+}

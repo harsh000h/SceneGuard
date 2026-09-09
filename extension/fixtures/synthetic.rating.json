@@ -1,0 +1,65 @@
+{
+  "card": {
+    "nudity": "low",
+    "sex": "possible",
+    "language": "none",
+    "gore": "possible",
+    "violence": "none",
+    "drugs": "none",
+    "horror": "none"
+  },
+  "detail": {
+    "nudity": {
+      "seconds": 12.5,
+      "segments": 2,
+      "max_confidence": 0.796,
+      "intensity": "low"
+    },
+    "sex": {
+      "seconds": 2.8,
+      "segments": 1,
+      "max_confidence": 0.43,
+      "intensity": "possible"
+    },
+    "language": {
+      "seconds": 0.0,
+      "segments": 0,
+      "max_confidence": 0.0,
+      "intensity": "none"
+    },
+    "gore": {
+      "seconds": 1.8,
+      "segments": 1,
+      "max_confidence": 0.45,
+      "intensity": "possible"
+    },
+    "violence": {
+      "seconds": 0.0,
+      "segments": 0,
+      "max_confidence": 0.0,
+      "intensity": "none"
+    },
+    "drugs": {
+      "seconds": 0.0,
+      "segments": 0,
+      "max_confidence": 0.0,
+      "intensity": "none"
+    },
+    "horror": {
+      "seconds": 0.0,
+      "segments": 0,
+      "max_confidence": 0.0,
+      "intensity": "none"
+    }
+  },
+  "family_safe": false,
+  "skippable_seconds": 15.3,
+  "skippable_segments": 3,
+  "needs_filtering": true,
+  "percent_runtime": 30.6,
+  "unconfirmed": [
+    "sex",
+    "gore"
+  ],
+  "note": "based on 4 tagged segment(s); 'none' means none detected, not none present"
+}
