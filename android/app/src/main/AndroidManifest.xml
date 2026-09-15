@@ -22,5 +22,10 @@
                 <data android:mimeType="video/*" />
             </intent-filter>
         </activity>
+                <activity
+            android:name=".PlayerActivity"
+            android:exported="false"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:launchMode="singleTop" />
     </application>
 </manifest>
