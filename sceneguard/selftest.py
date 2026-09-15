@@ -262,7 +262,7 @@ def run() -> int:
         ok_violence = len(kept) == 0
         kept_mixed = enforce_scope([{"start": 1.0, "end": 5.0, "categories": ["violence"]}, {"start": 1.0, "end": 5.0, "categories": ["sex"]}], SKIP_ELIGIBLE)
         check(ok_violence and len(kept_mixed) == 1, "violence can NEVER be skipped/blurred, even at conf 0.99", f"kept={len(kept)} adult kept={len(kept_mixed)}")
-        k2, _ = enforce_scope([{"start": 100.0, "end": 120.0, "categories": ["sex", "gore"], "confidence": 0.9}], SKIP_ELIGIBLE)
+        k2 = enforce_scope([{"start": 100.0, "end": 120.0, "categories": ["sex", "gore"], "confidence": 0.9}], SKIP_ELIGIBLE)
         check(len(k2) == 1 and k2[0]["categories"] == ["sex"], "mixed span narrowed to adult only (gore kept in-frame)", str(k2[0]["categories"]))
         check(SKIP_ELIGIBLE == ("nudity", "sex"), "scope invariant is exactly the adult categories", str(SKIP_ELIGIBLE))
         empty = rollup([], blocked_cats=DEFAULT_BLOCKED, duration=duration)
