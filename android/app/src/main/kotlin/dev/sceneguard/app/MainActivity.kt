@@ -11,6 +11,9 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Row
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -66,9 +69,18 @@ class MainActivity : ComponentActivity() {
             Button(onClick = { pickManifest.launch("application/json") }) {
                 Text(if (manifest == null) "Choose .sceneguard.json (optional)" else "Manifest chosen")
             }
-            androidx.compose.material3.Checkbox(checked = skip, onCheckedChange = { skip = it ?: false }, label = { Text("Skip adult spans") })
-            androidx.compose.material3.Checkbox(checked = blurShort, onCheckedChange = { blurShort = it ?: false }, label = { Text("Blur short spans instead of cutting") })
-            androidx.compose.material3.Checkbox(checked = muteLang, onCheckedChange = { muteLang = it ?: false }, label = { Text("Mute profanity (audio only)") })
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                Checkbox(checked = skip, onCheckedChange = { v -> skip = v ?: false })
+                Text("Skip adult spans", modifier = Modifier.clickable { skip = !skip })
+            }
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Checkbox(checked = blurShort, onCheckedChange = { v -> blurShort = v ?: false })
+                Text("Blur short spans instead of cutting", modifier = Modifier.clickable { blurShort = !blurShort })
+            }
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Checkbox(checked = muteLang, onCheckedChange = { v -> muteLang = v ?: false })
+                Text("Mute profanity (audio only)", modifier = Modifier.clickable { muteLang = !muteLang })
+            }
             Button(
                 enabled = video != null,
                 onClick = {
