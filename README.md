@@ -11,9 +11,16 @@ the whole project.
 the player seeks past it (or the frame is mosaicked) → the fight scene carries on
 untouched`
 
-[![ci](https://github.com/REPLACE_ME/sceneguard/actions/workflows/ci.yml/badge.svg)](https://github.com/REPLACE_ME/sceneguard/actions)
+[![ci](https://github.com/harsh000h/SceneGuard/actions/workflows/ci.yml/badge.svg)](https://github.com/harsh000h/SceneGuard/actions)
 [![license: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-blue)](LICENSE)
 [![data: CC0](https://img.shields.io/badge/data-CC0-green)](DATA-LICENSE)
+
+[![Download app-debug.apk](https://img.shields.io/badge/download-app--debug.apk-brightgreen?logo=android&logoColor=white)](../../releases/latest/download/app-debug.apk)
+[![Latest release](https://img.shields.io/badge/latest%20release-v0.1.1-blue?logo=github)](../../releases/latest)
+
+**📱 Phone:** [download `app-debug.apk`](../../releases/latest/download/app-debug.apk) — then *More details → Install anyway* (debug-signed, so Play Protect warns).
+**🖥️ Desktop:** `app-debug.apk` is Android-only. Get the `.exe` from the **Artifacts** of the [`desktop-binaries` run](../../actions/workflows/desktop-binaries.yml) for the latest tag, or build it with `pyinstaller desktop/app.py`.
+**🌐 Streaming (Netflix/Prime/JioHotstar):** no APK exists and none will — filter live streaming with the Chrome extension in `extension/`.
 
 > ## What this does **not** do
 > No decryption. No frame capture. No downloading, re-encoding or re-hosting of any
