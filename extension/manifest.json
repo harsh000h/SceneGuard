@@ -1,10 +1,20 @@
 {
   "manifest_version": 3,
   "name": "SceneGuard - skip adult scenes, keep the story",
-  "version": "0.1.0",
-  "description": "Skips nudity/sex scenes on Netflix, Prime Video, JioHotstar and other OTT sites using timestamp manifests. Violence is kept unless you block it. Never touches the video stream.",
-  "permissions": ["storage"],
-  "host_permissions": ["https://www.netflix.com/*", "https://www.primevideo.com/*", "https://www.hotstar.com/*", "https://www.jiohotstar.com/*", "https://www.sonyliv.com/*", "https://www.zee5.com/*", "http://localhost:8788/*"],
+  "version": "0.3.0",
+  "description": "Skips or blurs nudity/sex scenes on Netflix, Prime Video, JioHotstar, Sony LIV and Zee5 using timestamp lists. Violence, gore and language are marked or muted, never cut.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.netflix.com/*",
+    "https://www.primevideo.com/*",
+    "https://www.hotstar.com/*",
+    "https://www.jiohotstar.com/*",
+    "https://www.sonyliv.com/*",
+    "https://www.zee5.com/*",
+    "http://localhost:8788/*"
+  ],
   "content_scripts": [
     {
       "matches": [
@@ -14,10 +24,26 @@
         "https://www.sonyliv.com/watch/*",
         "https://www.zee5.com/movie-details/*"
       ],
-      "js": ["content.js"],
+      "js": [
+        "content.js"
+      ],
       "type": "module",
       "run_at": "document_idle"
     }
   ],
-  "action": { "default_popup": "popup.html", "default_title": "SceneGuard" }
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "core.mjs"
+      ],
+      "matches": [
+        "https://www.netflix.com/*",
+        "https://www.primevideo.com/*",
+        "https://www.hotstar.com/*",
+        "https://www.jiohotstar.com/*",
+        "https://www.sonyliv.com/*",
+        "https://www.zee5.com/*"
+      ]
+    }
+  ]
 }
