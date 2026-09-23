@@ -16,7 +16,8 @@
  * or a companion box, not a TV app.
  */
 
-import { decide, countdown, muteSpans, resolveManifest } from "./core.mjs";
+const { decide, countdown, muteSpans, resolveManifest } = await import(
+  chrome.runtime.getURL("core.mjs"));
 
 const TICK_MS = 50;
 const KEY = "sceneguard:prefs";
@@ -211,6 +212,14 @@ const poll = setInterval(async () => {
 
 chrome.runtime?.onMessage?.addListener((m) => {
   if (m?.type === "prefs-changed") {
+    clearInterval(state.timer);
+    state = { ...state, box: null };
+    seen = new WeakSet();
+    clearInterval(poll);
+    location.reload();
+  }
+});
+
     clearInterval(state.timer);
     state = { ...state, box: null };
     seen = new WeakSet();
